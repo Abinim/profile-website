@@ -1,0 +1,70 @@
+/* src/pages/Home.css */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4; /* Optional: background color for better contrast */
+}
+
+.welcome-message {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center; /* Center text alignment */
+}
+
+.humor-message {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 20px;
+  text-align: center;
+  font-style: italic;
+}
+
+.humor-message::before {
+  content: '😅';
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.humor-message::after {
+  content: '🌟';
+  font-size: 2rem;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .welcome-message {
+    font-size: 2rem; /* Slightly smaller text on medium screens */
+  }
+
+  .humor-message {
+    font-size: 1rem; /* Slightly smaller text on medium screens */
+  }
+
+  .humor-message::before,
+  .humor-message::after {
+    font-size: 1.5rem; /* Smaller icons on medium screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .welcome-message {
+    font-size: 1.5rem; /* Smaller text on small screens */
+  }
+
+  .humor-message {
+    font-size: 0.9rem; /* Smaller text on small screens */
+  }
+
+  .humor-message::before,
+  .humor-message::after {
+    font-size: 1.2rem; /* Smaller icons on small screens */
+  }
+}

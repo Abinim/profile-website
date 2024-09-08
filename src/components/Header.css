@@ -1,0 +1,119 @@
+header {
+  background: linear-gradient(90deg, #3a5a40, #2c3e50);
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading Styles */
+header h1 {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #f5deb3;
+}
+
+/* Navigation Styles */
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+  position: relative;
+}
+
+header nav ul li a:hover {
+  color: #00aced;
+  background-color: rgba(27, 170, 221, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header nav ul li a.active-link {
+  color: #00aced;
+  transform: scale(1.1);
+}
+
+header nav ul li a.next-button {
+  animation: blink-animation 1s infinite, zoom-animation 2s infinite;
+}
+
+@keyframes blink-animation {
+  0% {
+    color: #fff;
+  }
+  50% {
+    color: #00aced;
+  }
+  100% {
+    color: #fff;
+  }
+}
+
+@keyframes zoom-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* npm startResponsive Styles */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 0; /* Adjust padding for smaller screens */
+  }
+
+  header h1 {
+    font-size: 2rem; /* Smaller font size for smaller screens */
+  }
+
+  header nav ul {
+    margin: 10px 0 0 0; /* Adjust margin for smaller screens */
+  }
+
+  header nav ul li {
+    display: block; /* Stack navigation items vertically */
+    margin: 5px 0; /* Adjust margin for vertical stacking */
+  }
+
+  header nav ul li a {
+    display: block; /* Ensure links are full-width on small screens */
+    padding: 10px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  header {
+    padding: 10px 0; /* Further adjust padding for mobile screens */
+  }
+
+  header h1 {
+    font-size: 1.5rem; /* Further reduce font size for very small screens */
+  }
+
+  header nav ul li a {
+    font-size: 0.9rem; /* Reduce font size for very small screens */
+  }
+}

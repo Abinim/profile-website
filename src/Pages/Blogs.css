@@ -1,0 +1,63 @@
+/* src/pages/Blogs.css */
+
+.blogs {
+  padding: 20px;
+  text-align: center;
+}
+
+.coming-soon {
+  background: #f9f9f9; /* Light background for emphasis */
+  border: 2px solid #00aced; /* Border to highlight the section */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  margin: 50px auto; /* Center the box with some margin */
+  max-width: 600px; /* Max width for readability */
+}
+
+.coming-soon h2 {
+  font-size: 2rem; /* Larger font size */
+  color: #00aced; /* Highlight color */
+  margin-bottom: 10px;
+}
+
+.coming-soon p {
+  font-size: 1.2rem; /* Slightly larger text for readability */
+  color: #333; /* Darker text color */
+}
+
+/* Responsive Styles */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .coming-soon {
+    padding: 15px;
+    margin: 30px auto;
+    max-width: 90%; /* Ensure it uses more width on smaller screens */
+  }
+
+  .coming-soon h2 {
+    font-size: 1.5rem; /* Slightly smaller font size */
+  }
+
+  .coming-soon p {
+    font-size: 1rem; /* Slightly smaller font size */
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .coming-soon {
+    padding: 10px;
+    margin: 20px auto;
+    max-width: 95%; /* Almost full width for mobile screens */
+  }
+
+  .coming-soon h2 {
+    font-size: 1.2rem; /* Smaller font size */
+  }
+
+  .coming-soon p {
+    font-size: 0.9rem; /* Smaller font size */
+  }
+}

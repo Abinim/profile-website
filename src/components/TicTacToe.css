@@ -1,0 +1,125 @@
+/* src/components/TicTacToe.css */
+.tic-tac-toe-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  text-align: center;
+  padding: 10px; /* Add padding for better spacing */
+}
+
+.board {
+  display: inline-block;
+  border: 2px solid #333;
+  border-radius: 10px;
+  background: #fff;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Board Styling */
+.board-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.square {
+  width: 60px;
+  height: 60px;
+  background: #f9f9f9;
+  border: 2px solid #333;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover and Disabled States */
+.square:hover {
+  background-color: #e0e0e0;
+}
+
+.square.disabled {
+  cursor: not-allowed;
+  background-color: #ddd;
+}
+
+.square.You {
+  color: #00aced; /* Color for X */
+}
+
+.square.Me {
+  color: #ff5722; /* Color for O */
+}
+
+/* Status Styling */
+.status {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Controls Styling */
+.controls {
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.new-game {
+  background-color: #00aced;
+  color: #fff;
+}
+
+.new-game:hover {
+  background-color: #007bb5;
+}
+
+/* Responsive Styles */
+
+/* For tablets and smaller screens */
+@media (max-width: 768px) {
+  .square {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .status {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+}
+
+/* For mobile phones */
+@media (max-width: 480px) {
+  .square {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .status {
+    font-size: 1rem;
+  }
+
+  .btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+}
