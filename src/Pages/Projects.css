@@ -2,8 +2,7 @@
 
 .projects-container {
   padding: 20px;
-  background-color: #141414; /* Dark background similar to Netflix */
-  color: #fff;
+  color: #fff; /* Retain text color for contrast */
 }
 
 .projects-heading {
@@ -21,8 +20,7 @@
 .project-box {
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }

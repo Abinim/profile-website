@@ -5,6 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('/src/Polygon\ Luminary.svg');
+  background-repeat: no-repeat; /* Ensure the background doesn't repeat */
+  background-size: cover; /* Make the background cover the entire container */
+  background-position: center; /* Center the background */
+  min-height: 100vh;
 }
 
 code {

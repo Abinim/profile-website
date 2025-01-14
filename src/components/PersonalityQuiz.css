@@ -1,0 +1,220 @@
+/* Styling for PersonalityQuiz component */
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  background: #f4f7fa;
+  border-radius: 12px;
+  padding: 30px;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  font-family: 'Roboto', sans-serif;
+  transition: all 0.3s ease;
+}
+
+.quiz-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); /* Shadow for text */
+}
+
+.question-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.question-text {
+  font-size: 1.25rem;
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.choices-container {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+}
+
+.choice-btn {
+  padding: 14px 22px;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.choice-btn:hover {
+  background-color: #45a049;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.choice-btn:active {
+  transform: translateY(2px);
+}
+
+/* Result box that pops outside the quiz */
+.result {
+  position: absolute;
+  top: 10%; /* Position the result box near the top */
+  left: 80%; /* Position to the right */
+  transform: translate(-50%, -50%);
+  padding: 22px;
+  background-color: #e7f8e9;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: popUp 2s ease, bounce 0.5s ease 1.5s, floatFromRight 1s ease-in-out;
+}
+
+/* Result text styling */
+.result-text {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #333;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Pop-up animation for the result box */
+@keyframes popUp {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Bounce effect */
+@keyframes bounce {
+  0% {
+    transform: translateY(-10px);
+  }
+  25% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  75% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Float in from the right */
+@keyframes floatFromRight {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 80%;
+  }
+}
+
+/* Random Positioning (Optional: can be triggered dynamically in React JS) */
+@keyframes randomPosition {
+  0% {
+    top: 5%;
+    left: 10%;
+  }
+  25% {
+    top: 80%;
+    left: 5%;
+  }
+  50% {
+    top: 40%;
+    left: 90%;
+  }
+  75% {
+    top: 70%;
+    left: 50%;
+  }
+  100% {
+    top: 10%;
+    left: 50%;
+  }
+}
+
+/* Lion Head Background */
+body {
+  background-image: url('https://your-lion-image-url.jpg'); /* Replace with your lion image URL */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .quiz-container {
+    padding: 20px;
+  }
+
+  .quiz-title {
+    font-size: 1.8rem;
+  }
+
+  .question-text {
+    font-size: 1.1rem;
+  }
+
+  .choice-btn {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .quiz-container {
+    padding: 15px;
+  }
+
+  .quiz-title {
+    font-size: 1.6rem;
+  }
+
+  .question-text {
+    font-size: 1rem;
+  }
+
+  .choice-btn {
+    font-size: 0.95rem;
+    padding: 10px 18px;
+  }
+}
